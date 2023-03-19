@@ -7,8 +7,8 @@ def build_heap(data):
     # TODO: Creat heap and heap sort
     # try to achieve  O(n) and not O(n2)
     
-    for a in range(n // 2,-1,-1):
-        heap(a,n,data,swaps)
+    for x in range(n // 2,-1,-1):
+        heap(x,n,data,swaps)
     return swaps
 
 def heap(a,n,data,swaps):
@@ -19,10 +19,10 @@ def heap(a,n,data,swaps):
         
     b=a*2+2
     
-    if data[minimalais]>data[b] and n>b:
+    if n>b and data[minimalais]>data[b] :
         minimalais=b
     
-    if a!=minimalais:
+    if a != minimalais:
         data[a],data[minimalais]=data[minimalais],data[a]
         swaps.append((a,minimalais))
         heap(minimalais,n,data,swaps)
@@ -66,8 +66,8 @@ def main():
     # output all swaps
     
     print(len(swaps))
-    for a, b in swaps:
-        print(a, b)
+    for x, j in swaps:
+        print(x, j)
 
 if __name__ == "__main__":
     main()
