@@ -66,8 +66,8 @@ def main():
     # output all swaps
     
     print(len(swaps))
-    for i, j in swaps:
-        print(i, j)
+    for i, b in swaps:
+        print(i, b)
 
 if __name__ == "__main__":
     main()
