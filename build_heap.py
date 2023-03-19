@@ -14,7 +14,7 @@ def build_heap(data):
 def heap(a,n,data,swaps):
     minimalais=a
     y=a*2+1
-    if n>y and data[minimalais]<data[y]:
+    if n>y and data[minimalais]>data[y]:
         minimalais=y
         
     b=a*2+2
