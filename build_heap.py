@@ -35,14 +35,18 @@ def main():
     try:
         ievadits=input()
         
-        if 'F' in ievadits:
+        if ievadits.startswith('F'):
            testi="tests/"+input()
         with open(testi,'r') as ts:
             n=int(ts.readline())
             data = list(map(int, input().split()))
-        elseif 'I' in ievadits:
+        elseif ievadits.startswith('I')
             n=int(input())
             data = list(map(int, input().split()))
+            
+    except Exception as error:
+            print("error")
+            return
     
     # TODO : add input and corresponding checks
     # add another input for I or F 
