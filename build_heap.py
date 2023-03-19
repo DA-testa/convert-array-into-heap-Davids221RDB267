@@ -7,8 +7,8 @@ def build_heap(data):
     # TODO: Creat heap and heap sort
     # try to achieve  O(n) and not O(n2)
     
-    for x in range(n // 2,-1,-1):
-        heap(x,n,data,swaps)
+    for a in range(n // 2,-1,-1):
+        heap(a,n,data,swaps)
     return swaps
 
 def heap(a,n,data,swaps):
