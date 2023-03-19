@@ -3,23 +3,51 @@
 
 def build_heap(data):
     swaps = []
+    n=len(data)
     # TODO: Creat heap and heap sort
     # try to achieve  O(n) and not O(n2)
-
-
+    
+    for x in range(n //2,-1,-1):
+        heap(x,n,data,swaps)
+        
     return swaps
+
+def heap(a,n,data,swaps):
+    minimalais=a
+    y=a*2+1
+    if n>y and data[minimalais]<data[y]:
+        minimalais=y
+        
+    b=x*2+2
+    if data[minimalais]>data[b]n>b  and n>b:
+        minimalais=b
+    
+    if a!=minimalais:
+        data[b],data[minimalais]=data[minimalais],data[x]
+        swaps.append((a,minimalais))
+        heap(minimalais,n,data,swaps)
+        
+        
 
 
 def main():
+    
+    try:
+        ievadits=input()
+        
+        if 'F' in ievadits:
+           testi="tests/"+input()
+        with open(testi,'r') as ts:
+            n=int(ts.readline())
+            data = list(map(int, input().split()))
+        elseif 'I' in ievadits:
+            n=int(input())
+            data = list(map(int, input().split()))
     
     # TODO : add input and corresponding checks
     # add another input for I or F 
     # first two tests are from keyboard, third test is from a file
 
-
-    # input from keyboard
-    n = int(input())
-    data = list(map(int, input().split()))
 
     # checks if lenght of data is the same as the said lenght
     assert len(data) == n
@@ -30,12 +58,13 @@ def main():
 
     # TODO: output how many swaps were made, 
     # this number should be less than 4n (less than 4*len(data))
-
-
     # output all swaps
+    
     print(len(swaps))
     for i, j in swaps:
         print(i, j)
+        
+    exit()
 
 
 if __name__ == "__main__":
