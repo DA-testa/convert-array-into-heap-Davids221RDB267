@@ -19,7 +19,7 @@ def heap(a,n,data,swaps):
         minimalais=y
         
     b=x*2+2
-    if data[minimalais]>data[b]n>b  and n>b:
+    if data[minimalais]>data[b] and n>b:
         minimalais=b
     
     if a!=minimalais:
