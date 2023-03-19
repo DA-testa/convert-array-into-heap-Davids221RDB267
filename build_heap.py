@@ -7,8 +7,8 @@ def build_heap(data):
     # TODO: Creat heap and heap sort
     # try to achieve  O(n) and not O(n2)
     
-    for x in range(n //2,-1,-1):
-        heap(x,n,data,swaps)
+    for x in range(n //2-1,-1,-1):
+        swaps=heapify(data,n,x,swaps)
         
     return swaps
 
@@ -19,6 +19,7 @@ def heap(a,n,data,swaps):
         minimalais=y
         
     b=a*2+2
+    
     if data[minimalais]>data[b] and n>b:
         minimalais=b
     
@@ -37,6 +38,7 @@ def main():
         
         if ievadits.startswith('F'):
            testi="tests/"+input()
+        
            with open(testi,'r') as ts:
                 n=int(ts.readline())
                 data = list(map(int, ts.readline().split()))
