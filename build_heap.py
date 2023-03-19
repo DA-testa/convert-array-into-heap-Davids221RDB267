@@ -40,7 +40,7 @@ def main():
         with open(testi,'r') as ts:
             n=int(ts.readline())
             data = list(map(int, input().split()))
-        elif ievadits.startswith('I')
+        elif ievadits.startswith('I'):
             n=int(input())
             data = list(map(int, input().split()))
             
