@@ -39,7 +39,7 @@ def main():
            testi="tests/"+input()
             with open(testi,'r') as ts:
                 n=int(ts.readline())
-                data = list(map(int, input().split()))
+                data = list(map(int, ts.readline().split()))
         elif ievadits.startswith('I'):
             n=int(input())
             data = list(map(int, input().split()))
