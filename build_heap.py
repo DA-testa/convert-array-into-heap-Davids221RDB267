@@ -18,12 +18,12 @@ def heap(a,n,data,swaps):
     if n>y and data[minimalais]<data[y]:
         minimalais=y
         
-    b=x*2+2
+    b=a*2+2
     if data[minimalais]>data[b] and n>b:
         minimalais=b
     
     if a!=minimalais:
-        data[b],data[minimalais]=data[minimalais],data[x]
+        data[a],data[minimalais]=data[minimalais],data[a]
         swaps.append((a,minimalais))
         heap(minimalais,n,data,swaps)
         
@@ -37,7 +37,7 @@ def main():
         
         if ievadits.startswith('F'):
            testi="tests/"+input()
-            with open(testi,'r') as ts:
+           with open(testi,'r') as ts:
                 n=int(ts.readline())
                 data = list(map(int, ts.readline().split()))
         elif ievadits.startswith('I'):
@@ -67,8 +67,6 @@ def main():
     print(len(swaps))
     for i, j in swaps:
         print(i, j)
-        
-    exit()
 
 if __name__ == "__main__":
     main()
